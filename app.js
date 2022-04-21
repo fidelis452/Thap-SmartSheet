@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var con = require('./conn/conn');
+var smartsheet = require('./conn/conn');
 var session = require('express-session');
 
 var app = express();
@@ -47,8 +47,8 @@ app.use(function(err, req, res, next) {
 });
 
 //Create Server
-app.listen(3000, () => {
-  console.log('Listening on port 3000...');
+app.listen(4000, () => {
+  console.log('Listening on port 4000...');
 });
 
 module.exports = app;
